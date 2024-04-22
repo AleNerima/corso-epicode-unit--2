@@ -261,12 +261,10 @@ footer a {
     }
     input {
         width: 12em;
-        
         border: 0;
         border-bottom: 1px dashed #333;
     }
     button {
-        
         background-color: #3f6bca;
         border: 0;
         color: white;
@@ -280,5 +278,7 @@ footer a {
     }   
     aside div{
         float: left;
+        width: 33.3%;
+        height: 10em;
     }
 }
