@@ -31,6 +31,7 @@ header nav ul {
 }
 header nav li {
     list-style: none;
+    display: inline;
 }
 header nav li a {
     color: white;
@@ -56,6 +57,7 @@ section {
     margin-bottom: 2em;
 }
 section h2 {
+    background-color: #a3a3a3;
     text-align: center;
     color: #333;
     font-size: 2rem;
@@ -70,6 +72,20 @@ h1 {
     font-weight: bold;
     letter-spacing: -0.03em;
     margin-bottom: 0.7em;
+}
+#imgHtml{
+    background-color: white;
+    border: 4px solid #00A0C6;
+    outline: 4px solid #a02571;
+    width: 5em;
+    height: 5em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    margin-left: 0.3em;
+}
+#imgHtml img{
+    margin: 0.4em 0em 0.3em 0.3em;
+    max-width: 88%;
 }
 p, address, ul, ol, dl, blockquote {
     margin-bottom: 1.2em;
@@ -131,6 +147,7 @@ tbody tr:last-of-type {
 
 /* FORM */
 input {
+    width: 12em;
     padding: 5px;
     border: 0;
     border-bottom: 1px dashed #333;
@@ -177,4 +194,91 @@ footer {
 }
 footer a {
     color: fuchsia;
+}
+/***********Media query 576px***************/
+@media screen and (min-width: 577px){
+    /*****TABELLA************/
+    #contenitoreTabella{
+        width: 60%;
+        margin: auto 20%;
+    }
+    /*******************input e bottone************/
+    input {
+        width: 29em;
+        padding: 1em;        
+    }
+    button {
+        padding: 1em 1em;
+    }
+}
+/*********************** Media query 769 px**************/
+@media  screen and (min-width: 769px)  {
+    /************HEADER************/
+    header {
+        background: rgb(0,160,198);
+        background: linear-gradient(180deg, rgba(0,160,198,1) 0%, rgba(3,109,134,1) 68%);
+        text-transform: uppercase;
+        font-weight: bold;
+        color: white;
+        box-shadow: 0 3px 3px #444;
+        margin-bottom: 1.5em;
+        padding: 0em 0em;
+        height: 5em;
+    }
+    header div{
+        float: left;
+    }
+    header div img {
+        margin: 0.2em auto 0.2em 0em;
+    }
+    header div p {
+        float: inline-end;
+        margin: 2em 2em auto 1em;
+    }
+    header nav{
+        padding-top: 2em;
+    }
+    /*******************Tabella***************/
+    #contenitoreTabella{
+        width: 80%;
+        margin: auto 10%;
+    }
+    table {
+        margin-bottom: 2em;
+        width: 100%;
+    }
+    /*********video*********/
+    section {
+        display: table;
+        width: 50%;
+        border-radius: 30px;
+        height: 13em;
+    }
+    iframe {
+        width: 50%;
+        height: 13em;
+        float: left;
+    }
+    input {
+        width: 12em;
+        
+        border: 0;
+        border-bottom: 1px dashed #333;
+    }
+    button {
+        
+        background-color: #3f6bca;
+        border: 0;
+        color: white;
+        font-weight: bold;
+    }
+    /**************aside***************/
+    aside{
+        width:90%;
+        margin: auto 5%;
+        display: table;        
+    }   
+    aside div{
+        float: left;
+    }
 }
