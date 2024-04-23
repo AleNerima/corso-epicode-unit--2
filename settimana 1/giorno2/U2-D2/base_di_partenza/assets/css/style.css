@@ -119,13 +119,18 @@ section {
 }
 
 section h2 {
+  width: 7em;
+  height: 2em;
+  position: absolute;
   text-align: center;
   color: #333;
   font-size: 1.4rem;
   margin-bottom: 1.7rem;
   font-weight: bold;
   background-color: #a3a3a3;
-  padding: 0px 1em;
+  padding: 0.2em 1em;
+  top: -1em;
+  left: 1em;
 }
 
 /* ELEMENTI NEL MAIN - ARTICLE */
