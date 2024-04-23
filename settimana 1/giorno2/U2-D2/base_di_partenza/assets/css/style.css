@@ -27,6 +27,10 @@ header {
   box-shadow: 0 3px 3px #444;
   margin-bottom: 1.5em;
   padding: 2em 1.5em;
+  padding: 1em;
+  position: sticky;  
+  top: 0;
+  z-index: 1;
 }
 
 @media screen and (min-width: 800px) {
@@ -90,6 +94,16 @@ main {
   box-shadow: 0 3px 3px #444;
   padding: 2em 1em;
   margin-bottom: 1.5em;
+}
+h1 span{
+  position: relative;
+  display: inline-block;
+}
+h1 span img{
+  width: 100%;
+  position: absolute;
+  top: 1.2em;
+  right: 0.1em;
 }
 @media screen and (min-width: 700px) {
   main {
