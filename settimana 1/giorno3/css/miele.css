@@ -196,7 +196,6 @@ article section p {
 }
 
 article section div img{
-    
     width: 100%;
 }
 /*******************MEDIA QUERIES*******************/
@@ -224,5 +223,4 @@ nav ul{
     flex-wrap:nowrap;
     list-style: none;
 }
-
 }
