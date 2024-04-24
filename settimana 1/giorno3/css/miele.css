@@ -3,7 +3,7 @@
 }
 
 /***************HEADER****************/
-header{
+header{    
     width: 90%;
     margin: 1em 5% auto;
     background-color: rgba(254,247,226,255);
@@ -14,6 +14,7 @@ header{
     background-color: rgba(254,247,226,255);
 
 }
+/**************Mediaquery per mantenere mobile************/
 
 @media screen and (min-width: 379px){
     #contenitore{
@@ -54,7 +55,6 @@ nav ul{
     justify-content: center;
     flex-wrap: wrap;
     list-style: none;
-
 }
 nav ul div{
     width: 3em;
@@ -72,6 +72,8 @@ nav ul button{
     background-color: rgba(255,223,127,255);
     border: none;
     border-radius: 20% / 50%;
+    color: rgba(115,33,4,255);
+    font-weight: bold;
 }
 #shop-button{
     width: 15em;
@@ -85,4 +87,130 @@ nav ul button{
 nav ul li:nth-child(3){
     order: -1;
     align-items: center;
+}
+/*****************MAIN**************/
+main{
+    width: 90%;
+    margin: 1em 5% auto;
+}
+/*****************main h1*************/
+
+h1{
+    margin:1em auto;
+    font-size: larger;
+    text-align: center;
+    font-size: 3em;
+    font-weight: bolder;
+    word-wrap: break-word;
+    color: rgba(115,33,4,255);
+}
+h1 span{
+    display: block;
+}
+/******************Cards*************************/
+
+section article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards{
+    width: 15em;
+    height: 20em;
+    border-radius: 5%;
+    background-color: rgba(254,247,226,255);
+    margin: 1em auto;
+    
+}
+.cards img{
+    width: 100%;
+    height: 60%;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+}
+.cards span{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 1em auto;
+    color: rgba(115,33,4,255);
+}
+.cards button{
+    width: 50%;
+    height: 3em;
+    margin: 1em 25% 0;
+    background-color: rgba(255,223,127,255);
+    border: none;
+    border-radius: 20% / 50%;
+    color: rgba(115,33,4,255);
+    font-weight: bold;
+}
+/*********************Main Article dove c'è la spiegazione *******************/
+/******************H2******************/
+
+article #secondario{
+    margin:1em auto;
+    font-size: large;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bolder;
+    word-wrap: break-word;
+    color: rgba(115,33,4,255);
+}
+
+article section{
+    width: 15em;    
+    border-radius: 5%;
+    background-color: rgba(254,247,226,255);
+    margin: 1em auto 2em;
+}
+h3{
+    padding: 0.5em;
+    margin:1em auto;
+    font-size: large;
+    text-align: left;
+    font-size: 1em;
+    font-weight: bolder;
+    word-wrap: break-word;
+    color: rgba(115,33,4,255);
+}
+article section div{
+    width: 14em;
+    height: 12em;
+}
+article section p {
+    padding:0.5em;
+}
+
+article section div img{
+    
+    width: 100%;
+}
+/*******************MEDIA QUERIES*******************/
+@media screen and (min-width: 577px){
+/******************Header************/
+header{    
+    width: 90%;
+    background-color: rgba(254,247,226,255);
+}
+nav ul li:nth-child(3){
+    order: 0;
+    align-items: center ;
+}
+#contenitore{
+    width: 90%;   
+    margin: 1em 5%;
+    background-color: rgba(254,247,226,255);
+
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:nowrap;
+    list-style: none;
+}
+
 }
