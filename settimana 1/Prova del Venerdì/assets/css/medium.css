@@ -116,17 +116,17 @@ article section {
   cursor: pointer;
   display: flex;
   width: 33.33%;
-  height: 15em; 
+  height: 9em; 
 
 }
 /***********************Formattazione cards*****************/
 #contenuto {
   display: flex;
   flex-direction: column;
-  line-height: 2em;
+  line-height: 1em;
 }
 #contenuto h2{
-  font-size: 1.2em;
+  font-size: 0.8em;
   font-weight: bold;
   
 }
@@ -141,9 +141,7 @@ article section {
 .imgtitolini img{
   border-radius: 10px 10px 10px 10px;
 }
-.imgtitolini p {
-  margin-left: 1em;
-}
+
 #numero {
   font-size: 2em;
   font-weight: bolder;
@@ -152,8 +150,16 @@ article section {
 }
 #contenuto p{
   display: flex;  
-  align-items: center;
-  color: #1919199c;
+  align-items: center;  
+}
+.piecard{
+  color: #1919196b;
+  font-size: 0.8em;
+}
+.imgtitolini p {
+  margin-left: 1em;
+  font-size: 0.8em;  
+  color: black;
 }
 /***********************Article2 e cards2*****************/
 #article2{
