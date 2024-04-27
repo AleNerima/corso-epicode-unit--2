@@ -6,7 +6,6 @@ header {
   background-color: #ffc017;
   overflow: hidden;
 }
-
 #barra-superiore {  
   width: 100%;
   height: 6em;
@@ -14,6 +13,13 @@ header {
   justify-content: center;
   align-items: center;
   border-bottom: 2px solid #191919;  
+}
+.sticky {
+  background-color: #333; /* Cambia il colore di sfondo */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Assicura che la barra sia sopra gli altri elementi */
 }
 #sezione-inferiore {
   width: 100%;
