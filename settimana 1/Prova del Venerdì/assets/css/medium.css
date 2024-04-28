@@ -2,17 +2,17 @@
   box-sizing: border-box;
 }
 /*******************HEADER**************/
-header {  
+header {
   background-color: #ffc017;
   overflow: hidden;
 }
-#barra-superiore {  
+#barra-superiore {
   width: 100%;
   height: 6em;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 2px solid #191919;  
+  border-bottom: 2px solid #191919;
 }
 .sticky {
   background-color: #333; /* Cambia il colore di sfondo */
@@ -62,6 +62,19 @@ header {
   width: 80%;
   margin: 1em 1em 1em 12em;
 }
+/***********************Aggiustamenti testo Mediaqueries desktop****************/
+@media screen and (min-width: 1101px) and (max-width: 1300px) {
+  #testo {
+    width: 90%;
+    margin: 1em 1em 1em 7em;
+  }
+}
+@media screen and (min-width: 1301px) and (max-width: 1600px) {
+  #testo {
+    width: 90%;
+    margin: 1em 1em 1em 8.4em;
+  }
+}
 
 /******************Formattazione testo titolo************/
 
@@ -79,6 +92,7 @@ h1 {
 }
 /**********************bottoni****************/
 button {
+  cursor: pointer;
   background-color: #191919;
   border: none;
   color: white;
@@ -116,8 +130,7 @@ article section {
   cursor: pointer;
   display: flex;
   width: 33.33%;
-  height: 9em; 
-
+  height: 9em;
 }
 /***********************Formattazione cards*****************/
 #contenuto {
@@ -125,21 +138,22 @@ article section {
   flex-direction: column;
   line-height: 1em;
 }
-#contenuto h2{
+#contenuto h2 {
   font-size: 0.8em;
   font-weight: bold;
-  
 }
 .imgtitolini {
   display: flex;
   align-items: center;
   margin: 0.5em 0 0.5em;
 }
-.cards:nth-child(1) img{
+.cards:nth-child(1) img {
   border-radius: 100%;
 }
-.imgtitolini img{
-  border-radius: 10px 10px 10px 10px;
+.imgtitolini img {
+  border-radius: 5px 5px 5px 5px;
+  width: 1.5em;
+  height: 1.5em;
 }
 
 #numero {
@@ -148,45 +162,210 @@ article section {
   margin-right: 0.5em;
   color: #19191957;
 }
-#contenuto p{
-  display: flex;  
-  align-items: center;  
+#contenuto p {
+  display: flex;
+  align-items: center;
 }
-.piecard{
+.piecard {
   color: #1919196b;
   font-size: 0.8em;
 }
 .imgtitolini p {
   margin-left: 1em;
-  font-size: 0.8em;  
+  font-size: 0.8em;
   color: black;
 }
 /***********************Article2 e cards2*****************/
-#article2{
-  width: 50%;
+#article2 {
+  float: left;
+  width: 40%;
   height: 30em;
   margin-left: 15%;
-  background-color: green;
   margin-top: 5em;
+  margin-right: 5%;
 }
-.cards2{
+.cards2 {
+  cursor: pointer;
   width: 100%;
-  height: 10em;
+  height: 8em;
   display: flex;
-  
+  margin: 1em 0;
 }
-.testo-2{
-  background-color: red;
-  border:1px solid black;
-  height: 10em;
-  width: 80%;
-  z-index: 1;
+.testo-2 {
+  height: 8em;
+  width: 60%;
 }
-.immagine{
+.immagine {
   width: 30%;
-  height: 10em;
+  height: 8em;
 }
-.cards2 img{
-  width:100%;
+.immagine img {
+  width: 100%;
   height: 100%;
+}
+
+/****************************************testo cards2*******************/
+.testo-2 {
+  display: flex;
+  flex-direction: column;
+}
+.testo-2 h2 {
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 0em;
+}
+.Foto-nome {
+  display: flex;
+  align-items: center;
+}
+.testo-2 p {
+  font-size: 0.9em;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+.Foto-nome p {
+  margin-left: 1em;
+  margin-top: 1em;
+  font-size: 0.8em;
+  color: black;
+}
+.imgtitolini-2 {
+  width: 1.5em;
+  height: 1.5em;
+}
+.imgtitolini-2 img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+#squadrato img {
+  border-radius: 5px 5px 5px 5px;
+}
+.piepagina-2 {
+  display: flex;
+  align-items: center;
+}
+.piepagina-2 img {
+  width: 0.8em;
+  height: 0.8em;
+}
+.piepagina-2 p {
+  color: #1919196b;
+  margin-right: 0.5em;
+  margin-bottom: 0;
+  font-size: 0.8em;
+}
+#immagine-laterale {
+  position: relative;
+  top: 6em;
+  left: -2.5em;
+  opacity: 0.5;
+}
+/******************Foooter**********/
+footer h2 {
+  font-size: 1em;
+  color: #191919;
+  font-weight: bold;
+  margin: 6em 15% 2em 55%;
+}
+#discover {
+  display: flex;
+  flex-wrap: wrap;
+  width: 20em;
+}
+#discover p {
+  text-align: center;
+  margin: 0.5em;
+}
+#discover p a {
+  text-decoration: none;
+  color: #19191971;
+}
+
+#link-finali ul {
+  width: 25em;
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+  flex-wrap: wrap;
+  margin: 3em 2em;
+}
+#link-finali ul a {
+  color: #19191971;
+  text-decoration: none;
+  margin: 2em 0.5em;
+}
+/********************Media queries******************/
+/***********Tablet********************/
+@media screen and (min-width: 769px) and (max-width: 1100px) {
+  /****************Header*************/
+  #navbar {
+    width: 80%;
+  }
+  /**************Logo*****************/
+  #Logo img {
+    margin-left: 4em;
+  }
+  /*******Titolo e immagine svg*******/
+  #testo-titolo {
+    width: 90%;
+  }
+  #testo {
+    width: 90%;
+    margin: 1em 1em 1em 4em;
+  }
+  #contenitoreSvg {
+    width: 50%;
+  }
+  h1 {
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    font-size: 3.8em;
+    font-weight: bolder;
+  }
+  /******************Main***************/
+  /**********prime cards**********/
+  .cards {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 9em;
+  }
+  /**************Cards e footer***************/
+  #article2 {
+    clear: left;
+    width: 80%;
+    height: 30em;
+    margin: 20em 10% 2em;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  footer {
+    position: relative;
+    bottom: 55em;
+  }
+  footer h2 {
+    width: 80%;
+    margin:6em 10% 0.5em;
+  }
+  #discover{
+    width: 80%;
+    margin: 0em 10% 0.5em;
+  }
+   
+  #link-finali{
+    width: 80%;
+    margin:9em 10% 1em;
+  }
+  #link-finali ul {
+    width: 25em;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    flex-wrap: nowrap;
+    margin: 0;
+  }
 }
