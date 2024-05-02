@@ -1,0 +1,25 @@
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  @mixin floating {
+    border: 2px solid #ccc;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.514);
+    transition: transform 0.3s ease-in-out;
+  
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+  @mixin grid($columns) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; // Spazio tra le immagini
+  
+    .grid-item {
+      width: calc(100% / #{$columns} - #{$columns * 20px / ($columns + 1)}); // Calcolo dinamico della larghezza delle colonne
+      margin-bottom: 20px; // Aggiungi spazio inferiore a ciascuna immagine
+    }
+  }

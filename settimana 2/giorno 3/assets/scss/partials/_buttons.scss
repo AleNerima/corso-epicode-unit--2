@@ -1,0 +1,12 @@
+@mixin button($bg-color, $text-color) {
+    background-color: $bg-color;
+    color: $text-color;
+}
+
+.bottoni {
+    margin-left: 2em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

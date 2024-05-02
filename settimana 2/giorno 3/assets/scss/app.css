@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.m-sm {
+  margin: 1em;
+}
+
+.p-sm {
+  padding: 1em;
+}
+
+.m-md {
+  margin: 2em;
+}
+
+.p-md {
+  padding: 2em;
+}
+
+.m-lg {
+  margin: 3em;
+}
+
+.p-lg, #hero p, #logo-navbar #navbar nav ul li {
+  padding: 3em;
+}
+
+.m-xl {
+  margin: 6em;
+}
+
+.p-xl {
+  padding: 6em;
+}
+
+.m-xxl {
+  margin: 10em;
+}
+
+.p-xxl {
+  padding: 10em;
+}
+
+.bottoni {
+  margin-left: 2em;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+header {
+  background-color: #640fc5;
+  width: 100%;
+}
+
+#logo-navbar {
+  display: flex;
+  margin-bottom: 3em;
+}
+#logo-navbar #logo {
+  width: 20%;
+  height: 6em;
+  margin-left: 6em;
+}
+#logo-navbar #logo img {
+  width: 100%;
+  height: 100%;
+}
+#logo-navbar #navbar {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#logo-navbar #navbar nav {
+  display: flex;
+}
+#logo-navbar #navbar nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  display: flex;
+}
+#logo-navbar #navbar nav ul a {
+  text-decoration: none;
+  color: #f4f4f4;
+}
+
+#contenitore-bottoni {
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+#contenitore-bottoni .primary {
+  margin-left: 0;
+  background-color: #0e6cff;
+  color: white;
+}
+#contenitore-bottoni .secondary {
+  background-color: #ff8700;
+  color: white;
+}
+#contenitore-bottoni .tertiary {
+  background-color: #4caf50;
+  color: black;
+}
+
+#hero {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#hero #testo-bottoni {
+  width: 50%;
+}
+#hero #immagine {
+  width: 20%;
+  position: relative;
+  top: 15em;
+  left: -8em;
+}
+#hero #immagine img {
+  border: 2px solid #ccc;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.514);
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+  height: 100%;
+  min-width: 300px;
+}
+#hero #immagine img:hover {
+  transform: translateY(-5px);
+}
+#hero h1 {
+  font-size: 4em;
+  font-weight: bolder;
+}
+#hero p {
+  padding-left: 0;
+}
+
+main {
+  width: 80%;
+  margin: 25em 10%;
+}
+main .tabella {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+main .tabella .grid-item {
+  width: calc(100% / 4 - 16px);
+  margin-bottom: 20px;
+}
+main .tabella .oggetto {
+  border: 2px solid #ccc;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.514);
+  transition: transform 0.3s ease-in-out;
+}
+main .tabella .oggetto:hover {
+  transform: translateY(-5px);
+}/*# sourceMappingURL=app.css.map */

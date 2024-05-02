@@ -1,0 +1,18 @@
+$spacing: (
+  sm: 1em,
+  md: 2em,
+  lg: 3em,
+  xl: 6em,
+  xxl: 10em,
+);
+
+
+@each $size, $value in $spacing {
+  .m-#{$size} {
+    margin: $value;
+  }
+
+  .p-#{$size} {
+    padding: $value;
+  }
+}
