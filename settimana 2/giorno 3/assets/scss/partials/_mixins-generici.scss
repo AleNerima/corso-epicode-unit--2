@@ -20,6 +20,6 @@
   
     .grid-item {
       width: calc(100% / #{$columns} - #{$columns * 20px / ($columns + 1)}); // Calcolo dinamico della larghezza delle colonne
-      margin-bottom: 20px; // Aggiungi spazio inferiore a ciascuna immagine
+      margin-bottom: 20px; // spazio inferiore immagine
     }
   }

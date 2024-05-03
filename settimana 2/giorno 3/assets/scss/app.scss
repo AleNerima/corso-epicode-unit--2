@@ -109,7 +109,7 @@ main{
     margin: 25em 10%;
     .tabella{
         @include grid(4);
-        .oggetto{
+        .grid-items{
             @include floating;
         }
     }
