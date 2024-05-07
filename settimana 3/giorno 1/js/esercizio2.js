@@ -14,7 +14,7 @@ class Pet {
       this.breed = breed
     }
   
-    checkSameOwner(anotherPet) {
+    trovaStessoPadrone(anotherPet) {
       if (this.ownerName === anotherPet.ownerName) {
         return true
       } else {
