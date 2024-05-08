@@ -1,28 +1,38 @@
 document.addEventListener('DOMContentLoaded', function () {
     // faccio il get con il fetch
     fetch('https://striveschool-api.herokuapp.com/books')
-      .then(response => response.json())
-      .then(data => {
-        const booksContainer = document.getElementById('booksContainer');
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    const booksContainer = document.getElementById('booksContainer');
 
-        data.forEach(book => {
-          const card = document.createElement('div');
-          card.classList.add('col-3', 'mb-4');
+    data.forEach(book => {
+      const card = document.createElement('div');
+      card.classList.add('col-3', 'mb-4');
 
-          card.innerHTML = `
-            <div class="card h-100" data-book-id="${book._id}">
-                <img src="${book.img}" class="card-img-top h-50" alt="Book Cover">
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">${book.title}</h5>
-                    <p class="card-text">Price: ${book.price}</p>
-                    <button class="btn btn-danger mt-auto" onclick="removeBook(this)">Scarta</button>
-                    <button class="btn btn-primary mt-2" onclick="addToCart('${book._id}', '${book.title}', '${book.price}')">Compra ora</button>
-                </div>
+      card.innerHTML = `
+        <div class="card h-100" data-book-id="${book._id}">
+            <img src="${book.img}" class="card-img-top h-50" alt="Book Cover">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title">${book.title}</h5>
+                <p class="card-text">Price: ${book.price}</p>
+                <button class="btn btn-danger mt-auto" onclick="removeBook(this)">Scarta</button>
+                <button class="btn btn-primary mt-2" onclick="addToCart('${book._id}', '${book.title}', '${book.price}')">Compra ora</button>
             </div>
-          `;
-          booksContainer.appendChild(card);
-        });
-      });
+        </div>
+      `;
+      booksContainer.appendChild(card);
+    });
+  })
+  
+  .catch(error => {
+    console.log('Errore:', error);
+    
+  });
 
     let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
 
