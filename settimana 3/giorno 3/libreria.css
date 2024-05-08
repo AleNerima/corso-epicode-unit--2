@@ -1,0 +1,15 @@
+
+        .book-card {
+            margin-bottom: 20px;
+        }
+        .card-img-top {
+            max-height: 200px;
+            object-fit: contain;
+        }
+        #cart-list {
+            list-style: none;
+            padding: 0;
+        }
+        #cart-list li {
+            margin-bottom: 10px;
+        }
