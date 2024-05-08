@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // pulsante compra ora
     document.getElementById('checkoutBtn').addEventListener('click', () => {
-      alert('Checkout functionality will be implemented here.');
+      alert('Hai comprato i libri');
     });
     
     updateCartUI();
