@@ -1,3 +1,24 @@
+// Funzione per caricare le immagini di gatti all'avvio della pagina
+function loadCatImages() {
+    const query = 'cats'; 
+    const url = `https://api.pexels.com/v1/search?query=${query}`;
+    
+    fetchImages(url);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const loadImagesButton = document.querySelector('.btn-primary');
+    const loadSecondaryImagesButton = document.querySelector('.btn-secondary');
+
+    loadImagesButton.addEventListener('click', loadImages);
+    loadSecondaryImagesButton.addEventListener('click', loadSecondaryImages);
+
+    const searchButton = document.querySelector('#searchButton');
+    searchButton.addEventListener('click', searchImages);
+
+    loadCatImages();
+});
+
 // Funzione per caricare le immagini principali
 function loadImages() {
     const query = 'landscapes';
