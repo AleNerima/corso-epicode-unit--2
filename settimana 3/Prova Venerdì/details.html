@@ -12,12 +12,11 @@
     />
     <style>
       main {
-        background-color: rgb(191 212 235) !important;
+        background-image: url(./img/sfondo.jpg);
       }
 
-      footer {
-        background-color: #7373ff;
-      }
+      .navbar{background: rgb(0,0,0);
+          background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(8,8,8,1) 3%, rgba(99,99,99,1) 4%, rgba(8,8,8,1) 5%, rgba(63,63,63,1) 6%, rgba(10,10,10,1) 9%, rgba(94,94,94,1) 12%, rgba(8,8,8,1) 13%, rgba(107,107,107,1) 14%, rgba(62,62,62,1) 16%, rgba(88,88,88,1) 17%, rgba(28,28,28,1) 21%, rgba(53,53,53,1) 24%, rgba(28,28,28,1) 27%, rgba(59,59,59,1) 31%, rgba(28,28,28,1) 38%, rgba(8,8,8,1) 43%, rgba(45,45,45,1) 53%, rgba(43,43,43,1) 70%, rgba(64,64,64,1) 75%, rgba(8,8,8,1) 83%, rgba(57,57,57,1) 85%, rgba(27,27,27,1) 88%, rgba(27,27,27,1) 88%, rgba(137,137,137,1) 91%, rgba(247,247,247,1) 94%, rgba(100,100,100,1) 95%, rgba(247,247,247,1) 98%, rgba(255,255,255,1) 100%);}
     </style>
   </head>
   <body class="vh-100 d-flex flex-column">
@@ -37,7 +36,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <a class="navbar-brand" href="#">書道家-Shodoka</a>
+            <a class="navbar-brand text-danger fw-bold" href="#">書道家-Shodoka</a>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="home.html"
@@ -80,7 +79,6 @@
                 <p class="card-text" id="description"></p>
                 <p class="card-text" id="brand"></p>
                 <p class="card-text" id="price"></p>
-                
               </div>
             </div>
           </div>
@@ -88,41 +86,25 @@
       </div>
     </main>
 
-    <footer class="border-top">
+    <footer class="border-top bg-secondary text-light">
       <div class="container">
         <div class="row">
-          <div class="col-12 col-md-4">
-            <ul class="list-unstyled mb-0 text-center py-4">
+          
+          <div class="col-12  text-center d-flex justify-content-center align-items-center">
+            <h5>皆の書道-Shodo per tutti-<span id="year"></span></h5>
+          </div>
+          <div class="col-12 ">
+            <ul class="list-unstyled mb-0 text-center py-0">
               <li>
-                <a href="#" class="text-decoration-none text-dark">Home</a>
+                <a href="#" class="text-decoration-none text-light fs-6">Home</a>
               </li>
               <li>
-                <a href="#" class="text-decoration-none text-dark"
+                <a href="#" class="text-decoration-none text-light fs-6"
                   >Backoffice</a
                 >
               </li>
               <li>
-                <a href="#" class="text-decoration-none text-dark">Contacts</a>
-              </li>
-            </ul>
-          </div>
-          <div
-            class="col-12 col-md-4 text-center d-flex justify-content-center align-items-center"
-          >
-            <h5 class="text-light">皆の書道-Shodo per tutti</span></h5>
-          </div>
-          <div class="col-12 col-md-4">
-            <ul class="list-unstyled mb-0 text-center py-4">
-              <li>
-                <a href="#" class="text-decoration-none text-dark">Home</a>
-              </li>
-              <li>
-                <a href="#" class="text-decoration-none text-dark"
-                  >Backoffice</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-decoration-none text-dark">Contacts</a>
+                <a href="#" class="text-decoration-none text-light fs-6">Contacts</a>
               </li>
             </ul>
           </div>
