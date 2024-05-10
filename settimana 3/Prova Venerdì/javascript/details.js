@@ -42,35 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         document.querySelector('.card-body').appendChild(editButton);
 
-        const deleteButton = document.createElement('button');
-        deleteButton.classList.add('btn', 'btn-danger', 'ms-2');
-        deleteButton.textContent = 'Elimina';
-        deleteButton.addEventListener('click', function() {
-            // Visualizza una finestra di dialogo di conferma
-            const isConfirmed = confirm("Sei sicuro di voler eliminare questo prodotto?");
-            
-            // Se l'utente ha confermato, procedi con l'eliminazione
-            if (isConfirmed) {
-                fetch(`https://striveschool-api.herokuapp.com/api/product/${product._id}`, {
-                    method: 'DELETE',
-                    headers: {
-                        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjNkZTIwMjgxODQ0MjAwMTUzNzU4Y2EiLCJpYXQiOjE3MTUzMzE1ODYsImV4cCI6MTcxNjU0MTE4Nn0.DR0J6VXOG51x7sGrW6y18peID5nMkiCeGYKpKH1Mq3g'
-                    }
-                })
-                .then((response) => {
-                    if (response.ok) {
-                        console.log('Prodotto eliminato con successo.');
-                        document.querySelector('.card').remove();
-                    } else {
-                        throw new Error('Errore durante l\'eliminazione del prodotto');
-                    }
-                })
-                .catch((err) => {
-                    console.error('Errore:', err);
-                });
-            }
-        });
-        document.querySelector('.card-body').appendChild(deleteButton);
+      
     };
 
     const urlParams = new URLSearchParams(window.location.search);

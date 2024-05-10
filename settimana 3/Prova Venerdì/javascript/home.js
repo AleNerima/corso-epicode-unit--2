@@ -1,34 +1,39 @@
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('year').innerText = new Date().getFullYear();
 
+    const loadingSpinner = document.getElementById('loading-spinner'); 
+
     const getEvents = function () {
         fetch('https://striveschool-api.herokuapp.com/api/product/', {
             headers: {
                 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjNkZTIwMjgxODQ0MjAwMTUzNzU4Y2EiLCJpYXQiOjE3MTUzMzE1ODYsImV4cCI6MTcxNjU0MTE4Nn0.DR0J6VXOG51x7sGrW6y18peID5nMkiCeGYKpKH1Mq3g'
             }
         })
-            .then((response) => {
-                if (response.ok) {
-                    return response.json();
-                } else {
-                    throw new Error('Errore nella risposta del server');
-                }
-            })
-            .then((events) => {
-                const eventsRow = document.getElementById('events-row');
-                events.forEach((event) => {
-                    const eventCard = createEventCard(event);
-                    eventsRow.appendChild(eventCard);
+        .then((response) => {
+            if (response.ok) {
+                return response.json();
+            } else {
+                throw new Error('Errore nella risposta del server');
+            }
+        })
+        .then((events) => {
+            const eventsRow = document.getElementById('events-row');
+            events.forEach((event) => {
+                const eventCard = createEventCard(event);
+                eventsRow.appendChild(eventCard);
 
-                    eventCard.addEventListener('click', () => {
-                        const url = `details.html?id=${event._id}`;
-                        window.location.href = url;
-                    });
+                eventCard.addEventListener('click', () => {
+                    const url = `details.html?id=${event._id}`;
+                    window.location.href = url;
                 });
-            })
-            .catch((err) => {
-                console.error('Errore:', err);
             });
+
+            // Nascondo il coso del loading
+            loadingSpinner.style.display = 'none';
+        })
+        .catch((err) => {
+            console.error('Errore:', err);
+        });
     };
 
     const createEventCard = function (event) {
@@ -51,4 +56,3 @@ document.addEventListener('DOMContentLoaded', function () {
 
     getEvents();
 });
-

@@ -103,7 +103,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Aggiunta del pulsante "Reset"
     const resetButton = document.createElement('button');
     resetButton.textContent = 'Reset';
     resetButton.classList.add('btn', 'btn-success', 'mx-2');
@@ -114,14 +113,34 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     form.appendChild(resetButton);
 
-    // Aggiunta del pulsante "Cancella"
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Cancella';
     deleteButton.classList.add('btn', 'btn-danger', 'mx-2');
     deleteButton.addEventListener('click', function() {
-        if (confirm('Sei sicuro di voler cancellare la carta?')) {
-            // Qui aggiungi il codice per cancellare la carta
-            // Esegui la richiesta DELETE al server per cancellare la carta
+        if (confirm('Sei sicuro di voler cancellare il prodotto?')) {
+            if (productId) {
+                fetch(`https://striveschool-api.herokuapp.com/api/product/${productId}`, {
+                    method: 'DELETE',
+                    headers: {
+                        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjNkZTIwMjgxODQ0MjAwMTUzNzU4Y2EiLCJpYXQiOjE3MTUzMzE1ODYsImV4cCI6MTcxNjU0MTE4Nn0.DR0J6VXOG51x7sGrW6y18peID5nMkiCeGYKpKH1Mq3g'
+                    }
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Errore nella richiesta DELETE');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Prodotto cancellato:', data);
+                    alert('Il prodotto è stato cancellato con successo!');
+                })
+                .catch(error => {
+                    console.error('Si è verificato un errore durante la cancellazione:', error);
+                });
+            } else {
+                console.error('Impossibile cancellare il prodotto: ID non disponibile');
+            }
         }
     });
     form.appendChild(deleteButton);
