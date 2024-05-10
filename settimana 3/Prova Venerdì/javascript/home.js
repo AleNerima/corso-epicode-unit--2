@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
             });
 
-            // Nascondo lospinner del loading
+            // Nascondo lospinner 
             loadingSpinner.style.display = 'none';
         })
         .catch((err) => {
