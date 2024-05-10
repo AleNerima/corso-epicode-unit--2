@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
             });
 
-            // Nascondo il coso del loading
+            // Nascondo lospinner del loading
             loadingSpinner.style.display = 'none';
         })
         .catch((err) => {
